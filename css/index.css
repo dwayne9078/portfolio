@@ -8,6 +8,8 @@ body {
   top: 0;
   height: 4.5rem;
   width: 100%;
+  box-shadow: 0px 1px 20px 0;
+  background-color: #e1e1e1;
 }
 
 .nav-options {
@@ -16,4 +18,45 @@ body {
 
 .nav-option {
   margin: 0 1rem;
+}
+
+.main-container {
+  margin-top: 5.5rem;
+}
+
+.hero-container > .photo-border {
+  padding: 0.25rem;
+  border-radius: 100%;
+  border: 2px solid #5a93ff;
+  width: fit-content;
+  margin: 0.5rem auto;
+}
+
+.hero-container > .photo-border > .photo {
+  width: 10rem;
+  border-radius: 100%;
+  display: block;
+}
+
+.hero-container > .name {
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.hero-container > .role {
+  margin-top: 0.5rem;
+  text-align: center;
+  font-size: 1.1rem;
+  padding: 0 2rem;
+}
+
+.hero-container > .about-me {
+  margin-top: 1.5rem;
+  text-align: center;
+  font-size: 1.3rem;
+}
+
+.divider {
+  border-bottom: 1px solid;
+  margin: 0.5rem 1rem;
 }
