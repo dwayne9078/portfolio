@@ -1,0 +1,19 @@
+body {
+  background-color: #e1e1e1;
+}
+
+.nav-container {
+  display: flex;
+  position: fixed;
+  top: 0;
+  height: 4.5rem;
+  width: 100%;
+}
+
+.nav-options {
+  margin: auto;
+}
+
+.nav-option {
+  margin: 0 1rem;
+}
