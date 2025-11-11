@@ -138,24 +138,20 @@ body {
 }
 
 @media screen and (max-width: 1023px) {
-  /* --- Contenedor de la barra de navegación --- */
   .nav-container {
-    /* Asegura que el z-index esté por encima del contenido */
     z-index: 1000;
   }
 
-  /* --- El ícono de Hamburguesa (las 3 líneas) --- */
   .hamburger-icon {
-    display: flex; /* Mostrar el ícono */
+    display: flex;
     flex-direction: column;
     justify-content: space-around;
     width: 2rem;
     height: 1.5rem;
     cursor: pointer;
 
-    /* Posicionarlo en la barra */
-    margin: auto 0 auto 1.5rem; /* Centrado vertical, 1.5rem a la izq. */
-    z-index: 1002; /* Por encima del drawer y overlay */
+    margin: auto 0 auto 1.5rem;
+    z-index: 1002;
   }
 
   .hamburger-icon span {
@@ -163,47 +159,38 @@ body {
     height: 3px;
     background-color: #1e1e1e;
     border-radius: 2px;
-    /* Transición para la animación a "X" */
     transition: all 0.3s ease-in-out;
   }
 
-  /* --- El Drawer (el menú que se desliza) --- */
   .nav-options {
-    /* Sacarlo del flujo normal y posicionarlo fuera de la pantalla */
     position: fixed;
     top: 0;
     left: 0;
-    height: 100vh; /* Alto total de la pantalla */
-    width: 280px; /* Ancho del drawer */
-    max-width: 80%; /* Límite de seguridad */
+    height: 100vh;
+    width: 280px;
+    max-width: 80%;
 
-    /* Quitar márgenes de desktop */
     margin: 0;
 
-    /* Estilos visuales */
     background-color: #e1e1e1;
     box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
 
-    /* Cambiar a layout vertical */
     flex-direction: column;
-    justify-content: flex-start; /* Alinear enlaces arriba */
-    padding-top: 6rem; /* Espacio para que no choque con la barra superior */
+    justify-content: flex-start;
+    padding-top: 6rem;
 
-    /* Ocultarlo por defecto */
     transform: translateX(-100%);
     transition: transform 0.3s ease-in-out;
-    z-index: 1001; /* Debajo del ícono, encima del overlay */
+    z-index: 1001;
   }
 
-  /* --- Estilos de los enlaces dentro del drawer --- */
   .nav-option {
-    margin: 1.5rem 2rem; /* Más espacio para pantallas táctiles */
+    margin: 1.5rem 2rem;
     font-size: 1.2rem;
   }
 
-  /* --- El Overlay (fondo oscuro) --- */
   .overlay {
-    display: block; /* Necesario para que funcione */
+    display: block;
     position: fixed;
     top: 0;
     left: 0;
@@ -211,29 +198,21 @@ body {
     height: 100%;
     background: rgba(0, 0, 0, 0.6);
 
-    /* Oculto por defecto */
     visibility: hidden;
     opacity: 0;
     transition: opacity 0.3s, visibility 0.3s;
-    z-index: 1000; /* Detrás del drawer */
+    z-index: 1000;
   }
 
-  /* --- LA MAGIA: ESTADOS "CHECKED" --- */
-
-  /* Cuando el checkbox está marcado... */
-
-  /* 1. Muestra el Drawer */
   .menu-toggle:checked ~ .nav-options {
     transform: translateX(0);
   }
 
-  /* 2. Muestra el Overlay */
   .menu-toggle:checked ~ .overlay {
     visibility: visible;
     opacity: 1;
   }
 
-  /* 3. Anima el ícono de hamburguesa a una "X" */
   .menu-toggle:checked ~ .hamburger-icon span:nth-child(1) {
     transform: rotate(45deg) translate(5px, 5px);
   }
