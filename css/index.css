@@ -157,6 +157,20 @@ body {
   height: 100%;
 }
 
+.game-images-single {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.game-images-single img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
 @media screen and (max-width: 1023px) {
   .nav-container {
     z-index: 1000;
